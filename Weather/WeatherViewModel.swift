@@ -76,7 +76,6 @@ class WeatherViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "HH"
         
-        print(weather.symbolName)
         return WeatherData(
             date: "\(dateFormatter.string(from: weather.date))시",
             temperature: String(format: "%.0f°", weather.temperature.value),
